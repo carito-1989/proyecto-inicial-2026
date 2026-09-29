@@ -1,0 +1,577 @@
+/* ===================================================
+   PALETA DE COLORES OBLIGATORIA
+   =================================================== */
+:root {
+    --azul-corporativo: #003366; /* Header, títulos, footer y etiquetas */
+    --amarillo-acento:  #FFAA00; /* Botones, detalles y hover */
+    --gris-claro:        #D9D9D9; /* Bordes, separadores y fondos */
+    --verde-suave:       #A3D9A5; /* Íconos y subtítulos */
+    
+    --texto-oscuro:      #222222;
+    --fondo-blanco:      #ffffff;
+    --fondo-suave:       #f9f9f9;
+}
+
+/* ===================================================
+   MODELO DE CAJAS & RESET
+   =================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Modelo de cajas */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--texto-oscuro);
+    background-color: var(--fondo-blanco);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===================================================
+   HEADER Y NAVEGACIÓN (Flexbox)
+   =================================================== */
+.header {
+    background-color: var(--azul-corporativo);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.logo-text h2 {
+    color: var(--fondo-blanco);
+    font-size: 1.3rem;
+}
+
+.logo-text span {
+    color: var(--amarillo-acento);
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--fondo-blanco);
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--amarillo-acento);
+}
+
+/* ===================================================
+   BOTONES
+   =================================================== */
+.btn-primary {
+    background-color: var(--amarillo-acento);
+    color: var(--texto-oscuro);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--verde-suave);
+    color: var(--azul-corporativo);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--azul-corporativo);
+    border: 2px solid var(--azul-corporativo);
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: var(--azul-corporativo);
+    color: var(--fondo-blanco);
+}
+
+/* ===================================================
+   SECCIÓN INICIO / HERO
+   =================================================== */
+.hero {
+    background-color: var(--fondo-suave);
+    padding: 60px 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.badge {
+    background-color: var(--verde-suave);
+    color: var(--azul-corporativo);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: var(--azul-corporativo);
+    font-size: 2.2rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--amarillo-acento);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.hero-desc {
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-img {
+    flex: 1;
+}
+
+.hero-img img {
+    border-radius: 8px;
+    border: 3px solid var(--gris-claro);
+}
+
+/* ===================================================
+   SECCIÓN NOSOTROS Y VALORES
+   =================================================== */
+.about {
+    padding: 60px 0;
+}
+
+.about-grid {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.section-badge {
+    color: var(--amarillo-acento);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.about-text h2 {
+    color: var(--azul-corporativo);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 12px;
+}
+
+.diferencial {
+    margin-top: 30px;
+    border-top: 2px solid var(--gris-claro);
+    padding-top: 20px;
+}
+
+.diferencial h3 {
+    color: var(--azul-corporativo);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.diferencial-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.diferencial-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.diferencial-item .num {
+    background-color: var(--verde-suave);
+    color: var(--azul-corporativo);
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.diferencial-item h4 {
+    color: var(--azul-corporativo);
+}
+
+.about-img {
+    flex: 1;
+}
+
+.about-img img {
+    border-radius: 8px;
+    border: 1px solid var(--gris-claro);
+}
+
+/* ===================================================
+   SECCIÓN SERVICIOS
+   =================================================== */
+.services {
+    background-color: var(--fondo-suave);
+    padding: 60px 0;
+    border-top: 1px solid var(--gris-claro);
+    border-bottom: 1px solid var(--gris-claro);
+}
+
+.section-title {
+    text-align: center;
+    color: var(--azul-corporativo);
+    font-size: 2rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 10px auto 40px auto;
+    color: #555;
+}
+
+.services-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-card {
+    background-color: var(--fondo-blanco);
+    border: 1px solid var(--gris-claro);
+    border-radius: 8px;
+    padding: 25px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.service-icon {
+    font-size: 2.2rem;
+    color: var(--verde-suave);
+    background-color: var(--azul-corporativo);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: var(--azul-corporativo);
+    margin-bottom: 10px;
+}
+
+.service-card ul {
+    margin-top: 15px;
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+/* ===================================================
+   COBERTURA Y SEGURIDAD
+   =================================================== */
+.coverage {
+    padding: 60px 0;
+}
+
+.coverage-grid {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.coverage-text {
+    flex: 1;
+}
+
+.coverage-text h2 {
+    color: var(--azul-corporativo);
+    font-size: 1.8rem;
+}
+
+.coverage-text h3 {
+    color: var(--amarillo-acento);
+    margin-bottom: 15px;
+}
+
+.coverage-features {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.coverage-features li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.cities-box {
+    flex: 1;
+    background-color: var(--fondo-suave);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--gris-claro);
+}
+
+.cities-box h4 {
+    color: var(--azul-corporativo);
+    margin-bottom: 10px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.tag {
+    background-color: var(--azul-corporativo);
+    color: var(--fondo-blanco);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* ===================================================
+   CONTACTO Y FORMULARIO
+   =================================================== */
+.contact {
+    background-color: var(--fondo-suave);
+    padding: 60px 0;
+    border-top: 1px solid var(--gris-claro);
+}
+
+.contact-grid {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-info, .contact-form-card {
+    flex: 1;
+}
+
+.contact-info h2 {
+    color: var(--azul-corporativo);
+    font-size: 1.8rem;
+}
+
+.contact-info h3 {
+    color: var(--amarillo-acento);
+    margin-bottom: 15px;
+}
+
+.contact-details {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.contact-details li {
+    margin-bottom: 12px;
+}
+
+.contact-form-card {
+    background-color: var(--fondo-blanco);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--gris-claro);
+}
+
+.contact-form-card h3 {
+    color: var(--azul-corporativo);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--azul-corporativo);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--gris-claro);
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--azul-corporativo);
+}
+
+.btn-submit {
+    width: 100%;
+}
+
+/* ===================================================
+   FOOTER
+   =================================================== */
+.footer {
+    background-color: var(--azul-corporativo);
+    color: var(--fondo-blanco);
+    padding-top: 40px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.footer h3 {
+    color: var(--amarillo-acento);
+    margin-bottom: 10px;
+}
+
+.footer h4 {
+    color: var(--verde-suave);
+    margin-bottom: 15px;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer a {
+    color: var(--gris-claro);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--amarillo-acento);
+}
+
+.footer-bottom {
+    background-color: #002244;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   =================================================== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-container, .about-grid, .coverage-grid, .contact-grid {
+        flex-direction: column;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .services-grid {
+        flex-direction: column;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
